@@ -1,0 +1,18 @@
+from tkinter import Tk, Label, font
+
+def show_signature():
+    root = Tk()
+    root.attributes("-fullscreen", True)
+    root.configure(bg="black")
+
+    font_style = font.Font(family="Arial", size=100, weight="bold")
+    signature_label = Label(root, text="hazalanchess", font=font_style, fg="white", bg="black")
+    signature_label.pack(expand=True)
+
+    def close_window(event):
+        root.destroy()
+
+    root.bind("<Escape>", close_window)
+    root.mainloop()
+
+show_signature()
